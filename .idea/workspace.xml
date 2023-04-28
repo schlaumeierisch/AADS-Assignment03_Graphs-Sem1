@@ -4,18 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0acb79cb-053d-4844-b484-c3897ebf6cad" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/GraphType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/ObjGraph.java" afterDir="false" />
+    <list default="true" id="0acb79cb-053d-4844-b484-c3897ebf6cad" name="Changes" comment="rework (classes removed/added after discussion with lecturer)">
+      <change afterPath="$PROJECT_DIR$/files/example1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/elements/Edge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/elements/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/exceptions/EmptyFileException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/exceptions/InvalidFileFormatException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/ObjGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyMatrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyStructure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Edge.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Tuple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Vertex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/ObjGraph.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,13 +33,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="cf4b84c2-2eb6-49db-968b-fbc72ea9f193" />
   </component>
   <component name="ProjectId" id="2Ov1oxGCUVSBORfMkajqLAXvP8B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -58,9 +68,33 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="at.fhv.mme.graphs" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\matth\Desktop\AADS-Assignment03_Graphs\files" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="at.fhv.mme.graphs.exceptions" />
       <recent name="at.fhv.mme.graphs" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="at.fhv.mme.graphs.Main" />
+      <module name="graphs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.fhv.mme.graphs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -79,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682426495428</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="rework (classes removed/added after discussion with lecturer)">
+      <created>1682687481724</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682687481724</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="rework (classes removed/added after discussion with lecturer)" />
+    <option name="LAST_COMMIT_MESSAGE" value="rework (classes removed/added after discussion with lecturer)" />
   </component>
 </project>

@@ -1,5 +1,17 @@
 package at.fhv.mme.graphs;
 
+import at.fhv.mme.graphs.exceptions.EmptyFileException;
+import at.fhv.mme.graphs.exceptions.InvalidFileFormatException;
+import at.fhv.mme.graphs.structures.AdjacencyList;
+import at.fhv.mme.graphs.structures.AdjacencyMatrix;
+import at.fhv.mme.graphs.structures.AdjacencyStructure;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
 public class Graph {
     private final AdjacencyStructure adjStructure;
 
@@ -7,8 +19,59 @@ public class Graph {
         this.adjStructure = adjStructure;
     }
 
-    public AdjacencyStructure load(String fileName, String struct) {
-        // placeholder
-        return new AdjacencyMatrix();
+    public static Graph load(String fileName, GraphType graphType) throws IOException, EmptyFileException, InvalidFileFormatException {
+        AdjacencyStructure adjStructure = switch (graphType) {
+            case ADJACENCY_LIST -> new AdjacencyList();
+            case ADJACENCY_MATRIX -> new AdjacencyMatrix();
+        };
+
+        Graph graph = new Graph(adjStructure);
+
+        Path filePath = Paths.get(fileName);
+        List<String> lines = Files.readAllLines(filePath);
+
+        // check if file is empty
+        if (lines.isEmpty()) {
+            throw new EmptyFileException("File is empty.");
+        }
+
+        // first line: Nodes
+        String[] nodes = lines.get(0).split(",");
+        for (String node : nodes) {
+            graph.addNode(node.trim());
+        }
+
+        // remaining lines: Edges
+        for (int i = 1; i < lines.size(); i++) {
+            String[] edge = lines.get(i).split(",");
+
+            // check if line has the correct format
+            if (edge.length != 3) {
+                throw new InvalidFileFormatException("Invalid format in line " + (i + 1) + ".");
+            }
+
+            String firstNode = edge[0].trim();
+            String secondNode = edge[1].trim();
+            int weight;
+
+            // check if weight has the correct format
+            try {
+                weight = Integer.parseInt(edge[2].trim());
+            } catch (NumberFormatException e) {
+                throw new InvalidFileFormatException("Invalid weight in line " + (i + 1) + ".");
+            }
+
+            graph.addEdge(firstNode, secondNode, weight);
+        }
+
+        return graph;
+    }
+
+    public void addNode(String name) {
+        this.adjStructure.addNode(name);
+    }
+
+    public void addEdge(String firstNode, String secondNode, int weight) {
+        this.adjStructure.addEdge(firstNode, secondNode, weight);
     }
 }
