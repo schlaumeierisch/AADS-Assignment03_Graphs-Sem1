@@ -65,4 +65,34 @@ public class AdjacencyMatrix implements AdjacencyStructure {
     public LinkedList<Node> getNeighbours(Node node) {
         return null;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        // calculate the maximum length of node names
+        int maxNameLength = nodes.values().stream()
+                .mapToInt(node -> node.getName().length())
+                .max()
+                .orElse(4);
+
+        // print header with node names
+        sb.append(" ".repeat(maxNameLength + 1));
+        for (Node node : nodes.values()) {
+            sb.append(String.format("%" + (maxNameLength + 1) + "s", node.getName()));
+        }
+        sb.append("\n");
+
+        // print matrix with row labels (node names)
+        for (Node rowNode : nodes.values()) {
+            sb.append(String.format("%-" + (maxNameLength + 1) + "s", rowNode.getName()));
+            for (Node colNode : nodes.values()) {
+                int weight = adjMatrix[rowNode.getIndex()][colNode.getIndex()];
+                sb.append(String.format("%" + (maxNameLength + 1) + "d", weight));
+            }
+            sb.append("\n");
+        }
+
+        return sb.toString();
+    }
 }

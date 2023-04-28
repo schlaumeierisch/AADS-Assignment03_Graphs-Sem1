@@ -79,4 +79,8 @@ public class Graph {
     public void addEdge(String firstNode, String secondNode, int weight) throws NodeNotFoundException {
         this.adjStructure.addEdge(firstNode, secondNode, weight);
     }
+
+    public void print() {
+        System.out.println(this.adjStructure.toString());
+    }
 }

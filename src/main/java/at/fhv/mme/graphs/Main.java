@@ -2,6 +2,7 @@ package at.fhv.mme.graphs;
 
 import at.fhv.mme.graphs.exceptions.EmptyFileException;
 import at.fhv.mme.graphs.exceptions.InvalidFileFormatException;
+import at.fhv.mme.graphs.exceptions.NodeNotFoundException;
 
 import java.io.IOException;
 
@@ -10,9 +11,11 @@ public class Main {
 
         try {
             Graph graph = Graph.load("files/example1.txt", GraphType.ADJACENCY_MATRIX);
+
+            graph.print();
         } catch (IOException e) {
             System.err.println("Error while reading file: " + e.getMessage());
-        } catch (EmptyFileException | InvalidFileFormatException e) {
+        } catch (EmptyFileException | InvalidFileFormatException | NodeNotFoundException e) {
             System.err.println("Error: " + e.getMessage());
         }
 
