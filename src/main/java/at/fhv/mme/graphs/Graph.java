@@ -2,6 +2,7 @@ package at.fhv.mme.graphs;
 
 import at.fhv.mme.graphs.exceptions.EmptyFileException;
 import at.fhv.mme.graphs.exceptions.InvalidFileFormatException;
+import at.fhv.mme.graphs.exceptions.NodeNotFoundException;
 import at.fhv.mme.graphs.structures.AdjacencyList;
 import at.fhv.mme.graphs.structures.AdjacencyMatrix;
 import at.fhv.mme.graphs.structures.AdjacencyStructure;
@@ -19,7 +20,7 @@ public class Graph {
         this.adjStructure = adjStructure;
     }
 
-    public static Graph load(String fileName, GraphType graphType) throws IOException, EmptyFileException, InvalidFileFormatException {
+    public static Graph load(String fileName, GraphType graphType) throws IOException, EmptyFileException, InvalidFileFormatException, NodeNotFoundException {
         AdjacencyStructure adjStructure = switch (graphType) {
             case ADJACENCY_LIST -> new AdjacencyList();
             case ADJACENCY_MATRIX -> new AdjacencyMatrix();
@@ -36,9 +37,9 @@ public class Graph {
         }
 
         // first line: Nodes
-        String[] nodes = lines.get(0).split(",");
-        for (String node : nodes) {
-            graph.addNode(node.trim());
+        String[] nodeNames = lines.get(0).split(",");
+        for (String nodeName : nodeNames) {
+            graph.addNode(nodeName.trim());
         }
 
         // remaining lines: Edges
@@ -50,8 +51,8 @@ public class Graph {
                 throw new InvalidFileFormatException("Invalid format in line " + (i + 1) + ".");
             }
 
-            String firstNode = edge[0].trim();
-            String secondNode = edge[1].trim();
+            String firstNodeName = edge[0].trim();
+            String secondNodeName = edge[1].trim();
             int weight;
 
             // check if weight has the correct format
@@ -61,7 +62,11 @@ public class Graph {
                 throw new InvalidFileFormatException("Invalid weight in line " + (i + 1) + ".");
             }
 
-            graph.addEdge(firstNode, secondNode, weight);
+            try {
+                graph.addEdge(firstNodeName, secondNodeName, weight);
+            } catch (NodeNotFoundException e) {
+                throw new NodeNotFoundException("Node not found in line " + (i + 1) + ": " + e.getMessage());
+            }
         }
 
         return graph;
@@ -71,7 +76,7 @@ public class Graph {
         this.adjStructure.addNode(name);
     }
 
-    public void addEdge(String firstNode, String secondNode, int weight) {
+    public void addEdge(String firstNode, String secondNode, int weight) throws NodeNotFoundException {
         this.adjStructure.addEdge(firstNode, secondNode, weight);
     }
 }

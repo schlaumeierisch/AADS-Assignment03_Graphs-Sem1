@@ -11,7 +11,7 @@ public class AdjacencyList implements AdjacencyStructure {
     }
 
     @Override
-    public void addEdge(String firstNode, String secondNode, int weight) {
+    public void addEdge(String firstNodeName, String secondNodeName, int weight) {
 
     }
 

@@ -1,27 +1,25 @@
 package at.fhv.mme.graphs.elements;
 
 public class Edge {
-    private Node[][] nodes;
-    private int weight;
+    private final Node firstNode;
+    private final Node secondNode;
+    private final int weight;
 
-    public Edge(Node[][] nodes, int weight) {
-        this.nodes = nodes;
+    public Edge(Node firstNode, Node secondNode, int weight) {
+        this.firstNode = firstNode;
+        this.secondNode = secondNode;
         this.weight = weight;
     }
 
-    public Node[][] getNodes() {
-        return nodes;
+    public Node getFirstNode() {
+        return firstNode;
     }
 
-    public void setNodes(Node[][] nodes) {
-        this.nodes = nodes;
+    public Node getSecondNode() {
+        return secondNode;
     }
 
     public int getWeight() {
         return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
     }
 }

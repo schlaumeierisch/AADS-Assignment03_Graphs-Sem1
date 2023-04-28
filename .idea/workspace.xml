@@ -4,25 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0acb79cb-053d-4844-b484-c3897ebf6cad" name="Changes" comment="rework (classes removed/added after discussion with lecturer)">
-      <change afterPath="$PROJECT_DIR$/files/example1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/elements/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/elements/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/exceptions/EmptyFileException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/exceptions/InvalidFileFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/ObjGraph.java" afterDir="false" />
+    <list default="true" id="0acb79cb-053d-4844-b484-c3897ebf6cad" name="Changes" comment="example file created | exceptions added | load() method implemented">
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/exceptions/NodeNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyMatrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyStructure.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Edge.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/ObjGraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/elements/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/elements/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/elements/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/elements/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/ObjGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/ObjGraph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682687481724</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="example file created | exceptions added | load() method implemented">
+      <created>1682692120606</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682692120607</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="rework (classes removed/added after discussion with lecturer)" />
-    <option name="LAST_COMMIT_MESSAGE" value="rework (classes removed/added after discussion with lecturer)" />
+    <MESSAGE value="example file created | exceptions added | load() method implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="example file created | exceptions added | load() method implemented" />
   </component>
 </project>

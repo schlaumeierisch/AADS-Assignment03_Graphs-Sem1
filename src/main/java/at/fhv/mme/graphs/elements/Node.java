@@ -3,27 +3,29 @@ package at.fhv.mme.graphs.elements;
 import java.util.LinkedList;
 
 public class Node {
-    private String name;
-    private LinkedList<Edge> edges;
+    private final String name;
+    private final int index;
+    private final LinkedList<Edge> edges;
 
-    public Node(String name, LinkedList<Edge> edges) {
+    public Node(String name, int index) {
         this.name = name;
-        this.edges = edges;
+        this.index = index;
+        this.edges = new LinkedList<>();
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getIndex() {
+        return index;
     }
 
     public LinkedList<Edge> getEdges() {
         return edges;
     }
 
-    public void setEdges(LinkedList<Edge> edges) {
-        this.edges = edges;
+    public void addEdge(Edge edge) {
+        edges.add(edge);
     }
 }
