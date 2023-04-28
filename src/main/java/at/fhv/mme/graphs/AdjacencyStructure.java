@@ -1,5 +1,5 @@
 package at.fhv.mme.graphs;
 
-public class AdjacencyStructure {
+public interface AdjacencyStructure {
 
 }

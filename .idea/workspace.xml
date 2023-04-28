@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0acb79cb-053d-4844-b484-c3897ebf6cad" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Tuple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Vertex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/GraphType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/ObjGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/AdjacencyStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Tuple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Vertex.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +27,7 @@
       <list>
         <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -37,22 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/matth/Desktop/algo/graphs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/matth/Desktop/algo/graphs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="at.fhv.mme.graphs" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="at.fhv.mme.graphs" />
     </key>
   </component>
