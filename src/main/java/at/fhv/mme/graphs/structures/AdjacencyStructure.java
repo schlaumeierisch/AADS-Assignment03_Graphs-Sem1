@@ -8,5 +8,5 @@ import java.util.LinkedList;
 public interface AdjacencyStructure {
     void addNode(String nodeName);
     void addEdge(String firstNodeName, String secondNodeName, int weight) throws NodeNotFoundException;
-    LinkedList<Node> getNeighbours(Node node);
+    LinkedList<Node> getNeighbours(String nodeName) throws NodeNotFoundException;
 }

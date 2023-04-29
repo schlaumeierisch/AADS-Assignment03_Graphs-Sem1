@@ -16,7 +16,7 @@ public class AdjacencyList implements AdjacencyStructure {
     }
 
     @Override
-    public LinkedList<Node> getNeighbours(Node node) {
+    public LinkedList<Node> getNeighbours(String nodeName) {
         return null;
     }
 }

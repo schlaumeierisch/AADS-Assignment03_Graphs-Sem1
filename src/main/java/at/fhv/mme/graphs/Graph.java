@@ -1,5 +1,6 @@
 package at.fhv.mme.graphs;
 
+import at.fhv.mme.graphs.elements.Node;
 import at.fhv.mme.graphs.exceptions.EmptyFileException;
 import at.fhv.mme.graphs.exceptions.InvalidFileFormatException;
 import at.fhv.mme.graphs.exceptions.NodeNotFoundException;
@@ -11,6 +12,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Graph {
@@ -78,6 +80,10 @@ public class Graph {
 
     public void addEdge(String firstNode, String secondNode, int weight) throws NodeNotFoundException {
         this.adjStructure.addEdge(firstNode, secondNode, weight);
+    }
+
+    public LinkedList<Node> getNeighbours(String nodeName) throws NodeNotFoundException {
+        return this.adjStructure.getNeighbours(nodeName);
     }
 
     public void print() {
