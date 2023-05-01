@@ -7,6 +7,7 @@ import at.fhv.mme.graphs.exceptions.NodeNotFoundException;
 import at.fhv.mme.graphs.structures.AdjacencyList;
 import at.fhv.mme.graphs.structures.AdjacencyMatrix;
 import at.fhv.mme.graphs.structures.AdjacencyStructure;
+import at.fhv.mme.graphs.structures.ObjectGraph;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -26,6 +27,7 @@ public class Graph {
         AdjacencyStructure adjStructure = switch (graphType) {
             case ADJACENCY_LIST -> new AdjacencyList();
             case ADJACENCY_MATRIX -> new AdjacencyMatrix();
+            case OBJECT_GRAPH -> new ObjectGraph();
         };
 
         Graph graph = new Graph(adjStructure);

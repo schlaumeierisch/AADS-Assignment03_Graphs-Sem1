@@ -11,8 +11,8 @@ import java.util.Objects;
 public class ObjectGraph implements AdjacencyStructure {
     private final HashMap<String, Node> nodes;
 
-    public ObjectGraph(HashMap<String, Node> nodes) {
-        this.nodes = nodes;
+    public ObjectGraph() {
+        this.nodes = new HashMap<>();
     }
 
     @Override
