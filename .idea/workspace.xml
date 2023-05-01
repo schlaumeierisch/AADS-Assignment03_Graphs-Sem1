@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0acb79cb-053d-4844-b484-c3897ebf6cad" name="Changes" comment="structure ObjectGraph implemented">
+    <list default="true" id="0acb79cb-053d-4844-b484-c3897ebf6cad" name="Changes" comment="new exception added | adjList implemented (with toString method to print the list)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/exceptions/NodeAlreadyExistsException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/GraphType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/GraphType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/AdjacencyStructure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/ObjectGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhv/mme/graphs/structures/ObjectGraph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +103,7 @@
       <updated>1682426421016</updated>
       <workItem from="1682426421962" duration="4030000" />
       <workItem from="1682760417441" duration="2021000" />
-      <workItem from="1682945085294" duration="762000" />
+      <workItem from="1682945085294" duration="3593000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1682426495428</created>
@@ -150,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682945782654</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="structure ObjectGraph implemented">
+      <created>1682946006758</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682946006758</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +175,7 @@
     <MESSAGE value="method to print adjMatrix implemented" />
     <MESSAGE value="adjMatrix getNeighbours() method implemented" />
     <MESSAGE value="structure ObjectGraph implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="structure ObjectGraph implemented" />
+    <MESSAGE value="new exception added | adjList implemented (with toString method to print the list)" />
+    <option name="LAST_COMMIT_MESSAGE" value="new exception added | adjList implemented (with toString method to print the list)" />
   </component>
 </project>

@@ -2,6 +2,7 @@ package at.fhv.mme.graphs.structures;
 
 import at.fhv.mme.graphs.elements.Edge;
 import at.fhv.mme.graphs.elements.Node;
+import at.fhv.mme.graphs.exceptions.NodeAlreadyExistsException;
 import at.fhv.mme.graphs.exceptions.NodeNotFoundException;
 
 import java.util.HashMap;
@@ -16,7 +17,11 @@ public class ObjectGraph implements AdjacencyStructure {
     }
 
     @Override
-    public void addNode(String nodeName) {
+    public void addNode(String nodeName) throws NodeAlreadyExistsException {
+        if (this.nodes.containsKey(nodeName)) {
+            throw new NodeAlreadyExistsException("Node with name '" + nodeName + "' already exists.");
+        }
+
         Node node = new Node(nodeName);
         this.nodes.put(nodeName, node);
     }

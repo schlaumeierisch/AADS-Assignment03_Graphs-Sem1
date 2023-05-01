@@ -3,6 +3,7 @@ package at.fhv.mme.graphs;
 import at.fhv.mme.graphs.elements.Node;
 import at.fhv.mme.graphs.exceptions.EmptyFileException;
 import at.fhv.mme.graphs.exceptions.InvalidFileFormatException;
+import at.fhv.mme.graphs.exceptions.NodeAlreadyExistsException;
 import at.fhv.mme.graphs.exceptions.NodeNotFoundException;
 import at.fhv.mme.graphs.structures.AdjacencyList;
 import at.fhv.mme.graphs.structures.AdjacencyMatrix;
@@ -23,7 +24,7 @@ public class Graph {
         this.adjStructure = adjStructure;
     }
 
-    public static Graph load(String fileName, GraphType graphType) throws IOException, EmptyFileException, InvalidFileFormatException, NodeNotFoundException {
+    public static Graph load(String fileName, GraphType graphType) throws IOException, EmptyFileException, InvalidFileFormatException, NodeNotFoundException, NodeAlreadyExistsException {
         AdjacencyStructure adjStructure = switch (graphType) {
             case ADJACENCY_LIST -> new AdjacencyList();
             case ADJACENCY_MATRIX -> new AdjacencyMatrix();
@@ -76,7 +77,7 @@ public class Graph {
         return graph;
     }
 
-    public void addNode(String name) {
+    public void addNode(String name) throws NodeAlreadyExistsException {
         this.adjStructure.addNode(name);
     }
 
